@@ -71,6 +71,13 @@ public class StringsTesting {
             System.out.println(someCurseWord.contains("12"));
             System.out.println(someCurseWord.contains("321"));
         }
+
+        char someChar = 'a';
+        char someChar2 = '\n';
+        char someChar3 = '\r';
+        String asdasdasd = "\\..adafsdgtgdgdfads\n\\";
+        System.out.println(asdasdasd);
+
         // Zadanie 3
         // przyjac 3 wartosci typu double
         // obliczyc ich srednia
@@ -92,6 +99,5 @@ public class StringsTesting {
             i++;
         }
     }
-
 
 }

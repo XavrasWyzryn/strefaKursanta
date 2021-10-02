@@ -2,11 +2,11 @@ public class HelloWorld {
     public static void main(String[] args) {
         boolean isTrue = true;
         boolean isFalse = false;
-        boolean checkConjunction = isFalse && isTrue;
-        System.out.println(checkConjunction);
-        boolean checkAlternative = isFalse || isTrue;
-        System.out.println(checkAlternative);
-        isTrue = isFalse;
+                        boolean checkConjunction = isFalse && isTrue;
+                        System.out.println(checkConjunction);
+                        boolean checkAlternative = isFalse || isTrue;
+                        System.out.println(checkAlternative);
+                        isTrue = isFalse;
         isTrue = isFalse || checkAlternative;
 
         boolean checkNotAlternative = !isFalse && !isTrue;
