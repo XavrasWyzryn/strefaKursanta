@@ -1,26 +1,41 @@
 public class MoneyCounter {
     public static void main(String[] args) {
-        Wallet wallet = new Wallet();
-        wallet.countMoneyInWallet();
+        // deklarujemy zmienna typu Wallet i towrzymy jej obiekt
+        Wallet walletObject = new Wallet();
+        // wywolujemy metode cpuntMoneyInWallet na obiekcie walletObject
+        walletObject.countMoneyInWallet();
 
-        Money money = new Money();
-        money.setGrosz(50);
-        money.setZloty(5);
+        // deklarujemy zmienna typu Money i tworzymy jej obiekt
+        Money price = new Money();
+        // uzywamy metody setGrosz na obiekcie price, aby ustawic ilosc groszy w tym obiekcie
+        price.setGrosz(50);
+        // uzywamy metody setZloty na obiekcie price, aby ustawic ilosc zloty w tym obiekcie
+        price.setZloty(5);
 
-        wallet.addMoneyToWallet(money);
-        wallet.addMoneyToWallet(money);
-        wallet.countMoneyInWallet();
+        // uzywamy metody addMoneyToWallet z parametrem price na obiekcie walletObject
+        walletObject.addMoneyToWallet(price);
+        walletObject.addMoneyToWallet(price);
+        // uzywamy metody countMoneyInWallet na obiekcie walletObject (bez parametrow)
+        walletObject.countMoneyInWallet();
 
-        wallet.takeMoneyFromWallet(money);
-        wallet.countMoneyInWallet();
+        // uzywamy metody takeMoneyFromWallet z parametrem price na obiekcie walletObject
+        walletObject.takeMoneyFromWallet(price);
+        // uzywamy metody countMoneyInWallet na obiekcie walletObject (bez parametrow)
+        walletObject.countMoneyInWallet();
 
-        money.setZloty(4);
-        if(wallet.canAffordShopping(money)) {
-            wallet.takeMoneyFromWallet(money);
+        // uzywamy metody setZloty z parametrem 4 na obiekcie price (ustawiamy nowa wartosc zloty)
+        price.setZloty(4);
+        // sprawdzamy czy nas stac na zakupy za pieniadze rowne obiektowi price
+        if(walletObject.canAffordShopping(price)) {
+            // jesli tak, to dokonujemy zakupu
+            walletObject.takeMoneyFromWallet(price);
         }
-        wallet.countMoneyInWallet();
+        // liczymy, ile zostalo nam pieniedzy
+        walletObject.countMoneyInWallet();
 
-        wallet.takeMoneyFromWallet(money);
-        wallet.countMoneyInWallet();
+        // probujemy zabrac pieniadze z portfela bez liczenia, czy ich tyle mamy
+        walletObject.takeMoneyFromWallet(price);
+        // liczymy ile zostalo
+        walletObject.countMoneyInWallet();
     }
 }
