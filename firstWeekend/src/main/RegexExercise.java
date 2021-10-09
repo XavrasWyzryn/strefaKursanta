@@ -13,7 +13,7 @@ public class RegexExercise {
         System.out.println(emailMatcher.matches());
         emailMatcher.reset();
         System.out.println(emailMatcher.find());
-
+        
         String secondText = scanner.nextLine();
         Pattern streetPattern = Pattern.compile(
                 "[au]l\\. [A-ZĄĘĆŚŹŻŃÓ][a-ząęćśżźńó]{1,20} \\d{1,3}(/\\d{1,4})?");
@@ -21,7 +21,6 @@ public class RegexExercise {
         System.out.println(streetMatcher.matches());
         streetMatcher.reset();
         System.out.println(streetMatcher.find());
-
 
         // Zadanie 1
         // przyjmij jednego Stringa przy pomocy Scanner
@@ -36,5 +35,6 @@ public class RegexExercise {
 
         System.out.println(postalCodeMatcher.find());
         System.out.println(cityMatcher.find());
+        scanner.close();
     }
 }
