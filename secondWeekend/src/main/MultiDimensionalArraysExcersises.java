@@ -14,12 +14,59 @@ public class MultiDimensionalArraysExcersises {
         int shootRow = getShootValue("row");
 
         checkIfShipWasShoot(ships, shootColumn, shootRow);
-        // Zadanie 2 (zliczanie mieszkancow w budynky)
+
+        // Zadanie 2 (zliczanie mieszkancow w budynku)
         // stworzyc trojwymiarowa tablice, ktora bedzie pod nr klatki, pietra i mieszkania
         // trzymac informacje o ilosci osob tam mieszkajacych
         // policzyc ile osob mieszka w budynku
         // czyli int[][][] budynek, gdzie np. budynek[0][0][0] to bedzie ilosc mieszkancow
         // w zerowej klatce na parterze w mieszkaniu nr 0
+        int[][][] building = new int[][][]{
+                {{1, 4},{3, 3},{1, 1},{2, 1}},
+                {{2, 2},{4, 5},{1, 2},{3, 7}},
+                {{1, 1},{2, 3},{3, 2},{4, 1}}
+        };
+
+        int amountOfPeople = countPeopleInBuilding(building);
+        movePeopleFromApartment(building, 2, 3, 1, 1);
+        amountOfPeople = countPeopleInBuilding(building);
+        movePeopleFromApartment(building, 2, 3, 1, 5);
+        amountOfPeople = countPeopleInBuilding(building);
+        movePeopleIntoApartment(building, 2, 3, 1, 3);
+        amountOfPeople = countPeopleInBuilding(building);
+    }
+
+    private static void movePeopleFromApartment(int[][][] building,
+                                                int stairCase,
+                                                int floor,
+                                                int flat,
+                                                int peopleLeaving) {
+        if (building[stairCase][floor][flat] < peopleLeaving) {
+            building[stairCase][floor][flat] = 0;
+        } else {
+            building[stairCase][floor][flat] = building[stairCase][floor][flat] - peopleLeaving;
+        }
+    }
+
+    private static void movePeopleIntoApartment(int[][][] building,
+                                                int stairCase,
+                                                int floor,
+                                                int flat,
+                                                int peopleMovingIn) {
+        building[stairCase][floor][flat] = building[stairCase][floor][flat] + peopleMovingIn;
+    }
+
+    private static int countPeopleInBuilding(int[][][] building) {
+        int peopleLivingInBuilding = 0;
+        for (int i = 0; i < building.length; i++) {
+            for (int j = 0; j < building[i].length; j++) {
+                for (int k = 0; k < building[i][j].length; k++) {
+                    peopleLivingInBuilding += building[i][j][k];
+                }
+            }
+        }
+        System.out.println(peopleLivingInBuilding + " people are living in this building.");
+        return peopleLivingInBuilding;
     }
 
     static void checkIfShipWasShoot(int[][] ships, int column, int row) {

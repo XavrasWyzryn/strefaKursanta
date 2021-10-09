@@ -5,6 +5,11 @@ public class MutliDimensionalArrayWithMethodsUsageAndGlobalVariable {
     static int[][] ships = new int[10][10];
 
     public static void main(String[] args) {
+        MethodsUsageExcersises methodsUsageExcersises = new MethodsUsageExcersises();
+        System.out.println(methodsUsageExcersises.cutStringToMaxSize("abcdef", 4));
+        methodsUsageExcersises.showStringIfLong("abcd", 6);
+        System.out.println(methodsUsageExcersises.sumFromOneToN(3));
+
         // Zadanie 1 (gra w statki)
         // stworzyc dwuwymiarowa tablice, ktora trzyma wartosci 0 i ma rozmiary 10 x 10
         // w kilku losowych miejscach przypisac wartosc 1 (czyli zrobic statki)
