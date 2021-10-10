@@ -4,20 +4,19 @@ public class Product {
     private float price;
     private int amount;
 
+    public Product(String name, String unit, float price, int amount) {
+        this.name = name;
+        this.unit = unit;
+        this.price = price;
+        this.amount = amount;
+    }
+
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getUnit() {
         return unit;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
     }
 
     public float getPrice() {
@@ -34,5 +33,15 @@ public class Product {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", unit='" + unit + '\'' +
+                ", price=" + price +
+                ", amount=" + amount +
+                '}';
     }
 }

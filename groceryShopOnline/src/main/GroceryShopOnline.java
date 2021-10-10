@@ -8,20 +8,32 @@ public class GroceryShopOnline {
         nextDelivery.setDeliveryDate(new Date());
         nextDelivery.setDeliveryPrice(199.99f);
 
-        Supplier deliverySupplier = new Supplier();
-        deliverySupplier.setAddress("ul. Kwiatowa 5");
-        deliverySupplier.setCompanyName("Mleczarnia Szczesliwa Krowa");
-        deliverySupplier.setTaxID(2234567879l);
+        Supplier nonEditableSupplier = new Supplier(
+                "You can't edit me",
+                "ul. Kwiatowa 6",
+                3456789098l);
+        nonEditableSupplier.getCompanyName();
+        nonEditableSupplier.getTaxID();
+        System.out.println(nonEditableSupplier);
+        Supplier deliverySupplier = new Supplier(
+                "Mleczarnia Szczesliwa Krowa",
+                "ul. Kwiatowa 5",
+                2234567879l);
+        Supplier anotherSupplier = new Supplier(
+                "Serowarnia Naturalna",
+                "ul. Miodowa 14",
+                3456677654l);
         nextDelivery.setSupplier(deliverySupplier);
 
-        Product product0 = generateProduct("Mleko", "Karton",
-                5, 2.50f);
-        Product product1 = generateProduct("Ser", "Gram",
-                350, 22.40f);
-        Product product2 = generateProduct("Pomidor", "Kilogram",
-                60, 7.03f);
-        Product product3 = generateProduct("Cebula", "Kilogram",
-                40, 2.70f);
+        Product product0 = new Product("Mleko", "Karton",
+                2.50f, 5);
+        System.out.println(product0);
+        Product product1 = new Product("Ser", "Gram",
+                22.40f, 22);
+        Product product2 = new Product("Pomidor", "Kilogram",
+                7.03f, 60);
+        Product product3 = new Product("Cebula", "Kilogram",
+                2.70f, 40);
         Product[] products = new Product[4];
         products[0] = product0;
         products[1] = product1;
@@ -30,17 +42,5 @@ public class GroceryShopOnline {
 
         nextDelivery.setDeliveredProducts(products);
         warehouse.setNextDelivery(nextDelivery);
-    }
-
-    private static Product generateProduct(String name,
-                                           String unit,
-                                           int amount,
-                                           float price) {
-        Product product = new Product();
-        product.setAmount(amount);
-        product.setName(name);
-        product.setUnit(unit);
-        product.setPrice(price);
-        return product;
     }
 }
