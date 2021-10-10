@@ -5,12 +5,22 @@ public class Book {
     String author;
     int numberOfPages;
     float price;
+    boolean isRent;
 
     public Book(String title, String author, int numberOfPages, float price) {
         this.title = title;
         this.author = author;
         this.numberOfPages = numberOfPages;
         this.price = price;
+        isRent = false;
+    }
+
+    public boolean getIsRent() {
+        return isRent;
+    }
+
+    public void setRent(boolean rent) {
+        isRent = rent;
     }
 
     public String getTitle() {
