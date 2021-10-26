@@ -8,10 +8,10 @@ public class Square {
     }
 
     public double circumference() {
-        return 4 * a;
+        return 4 * this.a;
     }
 
     public double area() {
-        return a * a;
+        return this.a * this.a;
     }
 }

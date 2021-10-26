@@ -1,6 +1,6 @@
 package objectsExamples;
 
-import objectsExamples.geometricFigures.Square;
+import objectsExamples.geometricFigures.*;
 import objectsExamples.geometricUtils.GeometricUtils;
 
 public class ObjectsMain {
@@ -27,9 +27,21 @@ public class ObjectsMain {
 
         Square a = new Square(10.0);
         Square b = new Square(8.0);
-        System.out.println(a.area());
-        System.out.println(a.circumference());
+        System.out.println("Square area" + a.area());
+        System.out.println("Square circumference: " + a.circumference());
         System.out.println(GeometricUtils.isAreaBigger(a, b));
-        System.out.println(GeometricUtils.isAreaBigger(b, a));
+        System.out.println(GeometricUtils.isCircumferenceBigger(b, a));
+
+        Rectangle rectangle = new Rectangle(10, 5);
+        System.out.println("Rectangle area: " + rectangle.area());
+        System.out.println("Rectangle circumference: " + rectangle.circumference());
+
+        Triangle triangle = new Triangle(3,4 , 5);
+        System.out.println("Triangle area: " + triangle.areaOfAtriangle());
+        System.out.println("Triangle circumference: " + triangle.circumference());
+
+        Circle circle = new Circle(1);
+        System.out.printf("Area of circle: %10.2f\n", circle.areaOfCircle());
+        System.out.printf("Circumference: %11.2f\n", circle.circumferenceOfCircle());
     }
 }
