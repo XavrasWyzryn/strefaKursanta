@@ -20,7 +20,7 @@ public class Ex2 {
 
         System.out.println(bmi(weight, height));
 
-//        double bmi = weight/((height/100)*(height/100));
+//        double b = weight/((height/100)*(height/100));
         if (bmi(weight, height) < 18.5 || bmi(weight, height) > 24.9) {
             System.out.println("BMI nieoptymalne");
         } else {

@@ -22,9 +22,9 @@ public class Ex3 {
         if (delta(a, b, c) < 0) {
             System.out.println("Delta ujemna");
         } else {
-            double x1 = (-b - d)/(2 * a);
+            double x1 = (-b - Math.sqrt(d))/(double)(2 * a);
             System.out.println("x1 = " + x1);
-            double x2 = (-b + d)/(2 * a);
+            double x2 = (-b + Math.sqrt(d))/(double) (2 * a);
             System.out.println("x1 = " + x2);
             }
         }
