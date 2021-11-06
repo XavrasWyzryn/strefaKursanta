@@ -41,7 +41,7 @@ public class ObjectsMain {
         System.out.println("Triangle circumference: " + triangle.circumference());
 
         Circle circle = new Circle(1);
-        System.out.printf("Area of circle: %10.2f\n", circle.areaOfCircle());
-        System.out.printf("Circumference: %11.2f\n", circle.circumferenceOfCircle());
+        System.out.printf("Area of circle: %10.2f\n", circle.circleArea());
+        System.out.printf("Circumference: %11.2f\n", circle.CircleCircumference());
     }
 }

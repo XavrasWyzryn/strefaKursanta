@@ -8,11 +8,11 @@ public class Circle {
         this.r = r;
     }
 
-    public double areaOfCircle() {
+    public double circleArea() {
         return PI * r * r;
     }
 
-    public double circumferenceOfCircle() {
+    public double CircleCircumference() {
         return 2 * PI * r;
     }
 }
