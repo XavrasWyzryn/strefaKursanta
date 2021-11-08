@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex11 {
+public class Ex11_LongestText {
     public static void main(String[] args) {
       String longestText = "";
       while (true) {
@@ -28,6 +28,5 @@ public class Ex11 {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
-
 
 }

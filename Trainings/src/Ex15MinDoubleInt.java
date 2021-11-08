@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex15 {
+public class Ex15MinDoubleInt {
 
 //    Napisz program, który pobierze od użytkownika 10 dowolnie dużych liczb (zmiennych typu int)
 //    i wypisze te, które wystąpiły minimum dwukrotnie.

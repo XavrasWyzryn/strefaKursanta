@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Ex18 {
+public class Ex18AaaPsik {
 
 //    Napisz program, który pobierze od użytkownika tekst (zmienna typu String) i sprawdzi, czy użytkownik kichnął,
 //    tzn. czy w podanym tekście znajduje się tekst „aaaa psik” z dowolnie wieloma,

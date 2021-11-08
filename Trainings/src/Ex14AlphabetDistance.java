@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex14 {
+public class Ex14AlphabetDistance {
 //    Napisz program, który pobierze od użytkownika dwie małe litery alfabetu łacińskiego (typ char) i wyliczy,
 //    ile znaków stoi w alfabecie pomiędzy podanymi literami.
 //    Podpowiedź – skorzystaj z tablicy kodów ASCII i traktuj znaki jak liczby int.

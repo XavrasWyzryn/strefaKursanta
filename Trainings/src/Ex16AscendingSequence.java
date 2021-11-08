@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex16 {
+public class Ex16AscendingSequence {
 //    Napisz program, który pobierze od użytkownika 10 liczb (zmiennych typu int)
 //    i wypisze długość najdłuższego takiego podciągu tych liczb, który jest rosnący.
 //    Przykładowo, dla liczb: „1, 3, 8, 4, 2, 5, 6, 11, 13, 7”

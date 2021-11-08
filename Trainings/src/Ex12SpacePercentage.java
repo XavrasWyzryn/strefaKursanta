@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Ex12 {
+public class Ex12SpacePercentage {
 
     public static void main(String[] args) {
         String text = getTextFromUser();
-        String t1 = text;
+        String t1 = getTextFromUser();
         String t2 = text.replaceAll(" ", "");
 
         double x1 = t1.length();

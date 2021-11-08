@@ -1,13 +1,12 @@
 import java.util.Scanner;
 
-public class Ex3 {
+public class Ex3DeltaCalculeted {
     int a;
     int b;
     int c;
 
     private static double delta(int a, int b, int c) {
-        double d = (b * b) - (4 * a * c);
-        return d;
+        return (b * b) - (4 * a * c);
     }
 
     public static void main(String[] args) {

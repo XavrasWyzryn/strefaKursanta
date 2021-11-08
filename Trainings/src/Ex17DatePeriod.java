@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
-public class Ex17 {
+public class Ex17DatePeriod {
 //    Napisz program, który pobierze od użytkownika datę najbliższych Twoich zajęć w SDA i obliczy ile dni do nich pozostało.
 //    Podpowiedź: datę wczytaj jako typ String i przeparsuj na LocalDate.
 //    Obecną datę pobierz z metody LocalDate.now().

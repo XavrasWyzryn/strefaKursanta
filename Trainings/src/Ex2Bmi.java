@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Ex2 {
+public class Ex2Bmi {
     float weight;
     int height;
 
     public static double bmi (float weight, int height) {
-        double bmi = (weight * 10000) / (height * height);
-    return bmi;
+//        double bMi = (weight * 10000) / (height * height);
+        return (weight * 10000) / (height * height);
     }
 
     public static void main(String[] args) {
