@@ -9,6 +9,30 @@ public class Main {
 //    ii. Wypiszesz nazwisko tego autora, który napisał wiersz o największej liczbie zwrotek (niech odpowiedź obliczy Twój program!)
 
     public static void main(String[] args) {
+//        Poem p1 = new Poem(new Author("A. Sapkowski", "Polish"), 50);
+//        Poem p2 = new Poem(new Author("Dukaj", "Polish"), 15);
+//        Poem p3 = new Poem(new Author("S. Lem", "Polish"), 70);
+        Poem[] arrAuthor = new Poem[]{
+                new Poem(new Author("A. Sapkowski", "Polish"), 50),
+                new Poem(new Author("Dukaj", "Polish"), 15),
+                new Poem(new Author("S. Lem", "Polish"), 70)
+        };
 
+        getMaksStrophe(arrAuthor);
     }
+
+        private static void getMaksStrophe(Poem[] arrAuthor) {
+            int maxValue = Integer.MIN_VALUE;
+            int maks = 0;
+
+            for (Poem poem : arrAuthor) {
+                maks = Math.max(poem.getStropheNumbers(), maxValue);
+            }
+            for (Poem poem : arrAuthor) {
+                if (maks == poem.getStropheNumbers()) {
+                    System.out.println(poem.getCreator().getSurname());
+                }
+            }
+//            System.out.println(maks);
+        }
 }
