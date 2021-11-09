@@ -1,6 +1,6 @@
 package Ex19_app;
 
-public class Main {
+public class Main<arrAuthor> {
 //    Napisz program, składający się z kilku klas:
 //    a. Klasy Author, reprezentującą autora – pisarza wierszów, składającej się z pól surname oraz nationality (oba typu String)
 //    b. Klasy Poem, reprezentującą wiersz, składającą się z pól creator (typu Author) oraz stropheNumbers (typu int – reprezentującej ilość zwrotek wiersza)
@@ -13,21 +13,23 @@ public class Main {
 //        Poem p2 = new Poem(new Author("Dukaj", "Polish"), 15);
 //        Poem p3 = new Poem(new Author("S. Lem", "Polish"), 70);
         Poem[] arrAuthor = new Poem[]{
-                new Poem(new Author("A. Sapkowski", "Polish"), 50),
-                new Poem(new Author("Dukaj", "Polish"), 15),
-                new Poem(new Author("S. Lem", "Polish"), 70)
+                new Poem(new Author("A. Sapkowski", "Polish"), 500),
+                new Poem(new Author("J. Dukaj", "Polish"), 850),
+                new Poem(new Author("S. Lem", "Polish"), 700)
         };
 
         getMaksStrophe(arrAuthor);
     }
 
         private static void getMaksStrophe(Poem[] arrAuthor) {
-            int maxValue = Integer.MIN_VALUE;
-            int maks = 0;
+            int maks = arrAuthor[0].getStropheNumbers();
 
-            for (Poem poem : arrAuthor) {
-                maks = Math.max(poem.getStropheNumbers(), maxValue);
+            for (int i = 1; i < arrAuthor.length; i++) {
+                if (arrAuthor[i].getStropheNumbers() > maks) {
+                    maks = arrAuthor[i].getStropheNumbers();
+                }
             }
+
             for (Poem poem : arrAuthor) {
                 if (maks == poem.getStropheNumbers()) {
                     System.out.println(poem.getCreator().getSurname());
