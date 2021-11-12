@@ -14,13 +14,20 @@ public class Ex7_Fibonacci {
 
         int first = 1;
         int second = 1;
+        System.out.print(first + ", ");
+        System.out.print(second + ", ");
         for ( int i = 3; i <= n; i++) {
             int third = first + second;
             first = second;
             second = third;
+            System.out.print(second + ", ");
         }
-        System.out.println(second);
+        System.out.println();
 
+        for(int i = 1; i <= n; i++) {
+            System.out.print(calculatedFibonacci(i) + ", ");
+
+        }
     }
 
     private static int getNumberFromUser() {
@@ -28,5 +35,13 @@ public class Ex7_Fibonacci {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
+
+    private static int calculatedFibonacci( int elementIndex) {
+        if (elementIndex == 1 || elementIndex == 2 ) {
+            return 1;
+        }
+        return calculatedFibonacci( elementIndex -1) + calculatedFibonacci(elementIndex -2);
+    }
+
 
 }
