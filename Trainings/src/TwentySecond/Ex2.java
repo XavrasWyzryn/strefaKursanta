@@ -31,7 +31,7 @@ public class Ex2 {
         {
             koncowka=(liczba%10);
             liczba/=10;
-            if ((j==0)&&(liczba%100!=0 || koncowka !=0));
+//            if ((j==0)&&(liczba%100!=0 || koncowka !=0));
             if ((j==0)&&(liczba%10!=1)) {
                 slownie = jednosci[koncowka].concat(slownie);
             }
